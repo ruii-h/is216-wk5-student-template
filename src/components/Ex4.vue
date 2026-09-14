@@ -23,8 +23,7 @@ function removeItem(index) {
 
     <h2>Shopping Cart</h2>
     <!-- TODO: Add Code Here -->
-    <input v-model="newItem" type="text" placeholder="Enter an item">
-    <button @click="addItem">Add!</button>
+
 
     <ul>
         <li v-for="(item, index) in items" :key="index">
@@ -32,4 +31,6 @@ function removeItem(index) {
             <button @click="removeItem(index)">Delete</button>
         </li>
     </ul>
+    <input v-model="newItem" type="text" placeholder="Enter an item">
+    <button @click="addItem">Add!</button>
 </template>
