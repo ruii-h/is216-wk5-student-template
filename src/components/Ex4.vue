@@ -26,9 +26,9 @@ function removeItem(index) {
 
 
     <ul>
-        <li v-for="(item, index) in items" :key="index">
+        <li v-for="(item, key, index) in items" :key="key">
             {{ item }}
-            <button @click="removeItem(index)">Delete</button>
+            <button @click="removeItem(key)">Delete</button>
         </li>
     </ul>
     <input v-model="newItem" type="text" placeholder="Enter an item">
