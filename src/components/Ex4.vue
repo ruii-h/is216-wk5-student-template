@@ -31,6 +31,6 @@ function removeItem(index) {
             <button @click="removeItem(key)">Delete</button>
         </li>
     </ul>
-    <input v-model="newItem" type="text" placeholder="Enter an item">
+    <input v-model="newItem" type="text" placeholder="Enter an item" @keyup.enter="addItem">
     <button @click="addItem">Add!</button>
 </template>
