@@ -29,15 +29,19 @@ const result = computed(() => {
 </script>
 
 <template>
-    <p>x <input v-model.number="x"></p>
-    <select v-model="selectedOp">
-        <option v-for="op in operators">{{ op }}</option>
-    </select>
-    <p>y <input v-model.number="y"></p>
+    <div class="calculator">
+        <p>x <input v-model.number="x"></p>
+        <p>
+            <select v-model="selectedOp">
+                <option v-for="op in operators">{{ op }}</option>
+            </select>
+        </p>
+        <p>y <input v-model.number="y"></p>
 
-    <p>---------------------</p>
+        <p>---------------------</p>
 
-    <p>= {{ result }}</p>
+        <p>= {{ result }}</p>
+    </div>
 </template>
 
 <style scoped>
@@ -48,5 +52,11 @@ input {
 
 p {
     white-space: pre;
+}
+
+.calculator {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
 }
 </style>
